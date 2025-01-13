@@ -79,32 +79,32 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | | book_verified | Was booking verified by admin? | bool |
 | | book_ver_date | Date of a booking verification. | date |
 | | book_ver_update | Date of a booking verification update. | date |
-
-guest	guest_id(PK)	Unique identifier for a guest.	int
-	user_id(FK)	References the user_id in the user table.	int
-	birth_date	Date of birth.	date
-	membership_status	Status of a guest’s membership (e.g., “Standard”, “Gold”, “Premium”).	varchar (63)
-	commission	Commission, that guest pays (depends on his status).	decimal (3,2)
-	total_bookings	Number of bookings, that guest has.	int
-	reviews_left	Number of reviews, that guest has left.	int
-	rating	Rating of a guest.	decimal (2,1)
-
-guests_rev	g_review_id(PK)	Unique identifier for a guest’s review.	int
-	guest_id(FK)	References the guest_id in the guest table.	int
-	host_id(FK)	References the host_id in the host table.	int
-	host_rate	Rating, that guest gave to the host.	decimal (1,0)
-	host_rev_desc	Comment on host’s review.	text
-	listing_id(FK)	References the lsiting_id in the listing table.	int
-	listing_rate	Rating, that guest gave to the listing.	decimal (1,0)
-	list_rev_desc	Comment on listing’s review.	text
-	rev_date	Date of a review.	date
-	update_date	Date of an update of a review.	date
-
-host	host _id(PK)	Unique identifier for a host.	int
-	user_id(FK)	References the user_id in the user table.	int
-	bio	Description of a host.	text
-	commission	Commission, that host pays to Airbnb (It is constant 3%).	decimal (3,2)
-	rating	Rating of a host.	decimal (2,1)
+| | | | |
+| guest | guest_id(PK) | Unique identifier for a guest. | int |
+| | user_id(FK) | References the user_id in the user table. | int |
+| | birth_date | Date of birth. | date |
+| | membership_status | Status of a guest’s membership (e.g., “Standard”, “Gold”, “Premium”). | varchar (63) |
+| | commission | Commission, that guest pays (depends on his status). | decimal (3,2) |
+| | total_bookings | Number of bookings, that guest has. | int |
+| | reviews_left | Number of reviews, that guest has left. | int |
+| | rating | Rating of a guest.	decimal | (2,1) |
+| | | | |
+| guests_rev | g_review_id(PK) | Unique identifier for a guest’s review. | int |
+| | guest_id(FK) | References the guest_id in the guest table. | int |
+| | host_id(FK) | References the host_id in the host table. | int |
+| | host_rate | Rating, that guest gave to the host. | decimal (1,0) |
+| | host_rev_desc | Comment on host’s review. | text |
+| | listing_id(FK) | References the lsiting_id in the listing table. | int |
+| | listing_rate | Rating, that guest gave to the listing. | decimal (1,0) |
+| | list_rev_desc | Comment on listing’s review. | text |
+| | rev_date | Date of a review. | date |
+| | update_date | Date of an update of a review. | date |
+| | | | |
+| host | host _id(PK) | Unique identifier for a host. | int |
+| | user_id(FK) | References the user_id in the user table. | int |
+| | bio | Description of a host. | text |
+| | commission | Commission, that host pays to Airbnb (It is constant 3%). | decimal (3,2) |
+| | rating | Rating of a host. | decimal (2,1) |
 
 host_languages	host_id(FK)	References the host_id in the host table.	int
 	language_id(FK)	References the language_id in the languages table.	int
