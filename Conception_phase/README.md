@@ -126,96 +126,96 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | | final_income | After tax income, Airbnb gets from a successful booking. It is usually counted from guest’s and host’s commissions. | decimal (7,2) |
 | | income_date | Date of an income. | decimal (2,1) |
 | | | | |
-languages	language_id(PK)	Unique identifier for a language.	int
-	language_name	Name of language.	varchar (127)
-	language_code	International code of a language.	varchar (15)
-
-listing	listing_id(PK)	Unique identifier for a listing.	int
-	host_id(FK)	References the host_id in the host table.	int
-	location_id (FK)	References the location_id in the location table.	int
-	title	Title of a listing.	varchar (255)
-	description	Description of a listing.	text
-	property_type	Type of a property (e.g., "Apartment", "House", "Villa", “Room”).	varchar (63)
-	max_capacity	Number of maximum guests allowed.	tinyint
-	beds	Number of beds.	tinyint
-	bathrooms	Number of bathrooms.	tinyint
-	price_per_night	Price of a listing per night.	decimal (7,2)
-	cleaning_fee	Cleaning fee of a listing.	decimal (6,2)
-	availability_status	Current availability status (e.g., "Available", "Blocked", "Booked").	varchar (63)
-	rating	Rating of a booking.	decimal (2,1)
-	created	Date, when the listing was created.	date
-	updated	Date, when the listing was updated.	date
-
-listing_amenity	listing_id(FK)	References the lsiting_id in the listing table.	int
-	amenity_id(FK)	References the amenity_id in the amenity table.	int
-	created	Date, when listing got an amenity.	date
-
-location	location_id(PK)	Unique identifier for a location.	int
-	continent	Name of a continent.	varchar (127)
-	country	Name of a country.	varchar (255)
-	state	Name of a state.	varchar (255)
-	city	Name of a city.	varchar (255)
-	postal_code	Postal code.	varchar (127)
-	building_num	Number of a building.	smallint
-	latitude	Latitude of a location.	decimal (7,4)
-	longitude	Longitude of a location.	decimal (7,4)
-
-payment_method	payment_method_id(PK)	Unique identifier for a payment method.	int
-	user_id(FK)	References the user_id in the user table.	int
-	payment_type	Type of payment method (e.g., "Credit Card", "PayPal").	varchar (127)
-	provider	Provider (e.g., “Visa”, “MasterCard” etc.).	varchar (127)
-	cardholder_name	Cardhoder’s name.	varchar (255)
-	last_four_digits	Last four digits of a card.	varchar (7)
-	expiration_date	Expiration date of a card.	date
-	is_current	Is a payment method up to date?	bool
-	method_date	Date, when payment method was added.	date
-
-privileges	privilege_id(PK)	Unique identifier for a privilege.	int
-	privilege_name	Name of a privilege.	varchar (127)
-	description	Description of a privilege.	text
-
-profile_picture	picture_id_id(PK)	Unique identifier for a profile picture.	int
-	user_id(FK)	References the user_id in the user table.	int
-	picture_url	URL of a picture.	varchar (2047)
-	upload_date	Date, when a profile picture was uploaded	date
-	is_current	Is profile picture up to date?	bool
-
-role	role_id(PK)	Unique identifier for a role.	int
-	role_name	Name of a role.	varchar (127)
-	description	Description of a role.	text
-
-role_privilege	role_id(FK)	References the role_id in the role table.	int
-	privilege_id(FK)	References the privilege_id in the privilege table.	int
-
-user	user_id(PK)	Unique identifier for a user.	int
-	username	Username of a user.	varchar (127)
-	email	Email of a user.	varchar (255)
-	phone_number	Phone number of a user.	varchar (31)
-	password	Password of a user.	varchar (255)
-	location_id(FK)	References the location_id in the location table.	int
-	language_id(FK)	References the language_id in the languages table.	int
-
-user_check	verification_id(PK)	Unique identifier for a user verification.	int
-	admin_id(FK)	References the admin_id in the admin table.	int
-	user_id(FK)	References the user_id in the user table.	int
-	email_ver	Has an admin verified the email?	bool
-	phone_ver	Has an admin verified the phone number?	bool
-	prof_pic_id(FK)	References the picture_id in the profile_picture table.	int
-	photo_ver	Has an admin verified the profile picture?	bool
-	payment_method_id(FK)	References the payment_method_id in the payment_method table.	int
-	payment_ver	Has an admin verified the payment method?	bool
-	ver_date	Date of a user verification.	date
-
-user_role	user_id(FK)	References the user_id in the user table.	int
-	role_id(FK)	References the role_id in the role table.	int
-	date_created	Date when a user created a role.	date
-
-verification	id(PK)	Unique identifier for verification of a user. Also references the user_id in the user table	int
-	verification_id (FK)	References the verification_id in the user_check table.	int
-	user_id(FK)	References a user_id in user table.	int
-	phone_verified	Is phone verified?	bool
-	email_verified	Is email verified?	bool
-	picture_verified	Is profile picture verified?	bool
-	payment_verified	Is payment method verified?	bool
-	is_verified	Is user account verified?	bool
-	ver_update	Date when the verification data were verified.	date
+| languages | language_id(PK) | Unique identifier for a language. | int |
+| | language_name | Name of language. | varchar (127) |
+| | language_code | International code of a language. | varchar (15) |
+| | | | |
+| listing | listing_id(PK) | Unique identifier for a listing. | int |
+| | host_id(FK) | References the host_id in the host table. | int |
+| | location_id (FK) | References the location_id in the location table. | int |
+| | title | Title of a listing. | varchar (255) |
+| | description | Description of a listing. | text |
+| | property_type | Type of a property (e.g., "Apartment", "House", "Villa", “Room”). | varchar (63) |
+| | max_capacity | Number of maximum guests allowed. | tinyint |
+| | beds | Number of beds. | tinyint |
+| | bathrooms | Number of bathrooms. | tinyint |
+| | price_per_night | Price of a listing per night. | decimal (7,2) |
+| | cleaning_fee | Cleaning fee of a listing. | decimal (6,2) |
+| | availability_status | Current availability status (e.g., "Available", "Blocked", "Booked"). | varchar (63) |
+| | rating | Rating of a booking. | decimal (2,1) |
+| | created | Date, when the listing was created. | date |
+| | updated | Date, when the listing was updated. | date |
+| | | | |
+| listing_amenity | listing_id(FK) | References the lsiting_id in the listing table. | int |
+| | amenity_id(FK) | References the amenity_id in the amenity table. | int |
+| | created | Date, when listing got an amenity. | date |
+| | | | |
+| location | location_id(PK) | Unique identifier for a location. | int |
+| | continent | Name of a continent. | varchar (127) |
+| | country | Name of a country. | varchar (255) |
+| | state | Name of a state. | varchar (255) |
+| | city | Name of a city. | varchar (255) |
+| | postal_code | Postal code. | varchar (127) |
+| | building_num | Number of a building. | smallint |
+| | latitude | Latitude of a location. | decimal (7,4) |
+| | longitude | Longitude of a location. | decimal (7,4) |
+| | | | |
+| payment_method | payment_method_id(PK) | Unique identifier for a payment method. | int |
+| | user_id(FK) | References the user_id in the user table. | int |
+| | payment_type | Type of payment method (e.g., "Credit Card", "PayPal"). | varchar (127) |
+| | provider | Provider (e.g., “Visa”, “MasterCard” etc.). | varchar (127) |
+| | cardholder_name | Cardhoder’s name. | varchar (255) |
+| | last_four_digits | Last four digits of a card. | varchar (7) |
+| | expiration_date | Expiration date of a card. | date |
+| | is_current | Is a payment method up to date? | bool |
+| | method_date | Date, when payment method was added. | date |
+| | | | |
+| privileges | privilege_id(PK) | Unique identifier for a privilege. | int |
+| | privilege_name | Name of a privilege. | varchar (127) |
+| | description | Description of a privilege. | text |
+| | | | |
+| profile_picture | picture_id_id(PK) | Unique identifier for a profile picture. | int |
+| | user_id(FK) | References the user_id in the user table. | int |
+| | picture_url | URL of a picture. | varchar (2047) |
+| | upload_date | Date, when a profile picture was uploaded | date |
+| | is_current | Is profile picture up to date? | bool |
+| | | | |
+| role | role_id(PK) | Unique identifier for a role. | int |
+| | role_name | Name of a role. | varchar (127) |
+| | description | Description of a role. | text |
+| | | | |
+| role_privilege | role_id(FK) | References the role_id in the role table. | int |
+| | privilege_id(FK) | References the privilege_id in the privilege table. | int |
+| | | | |
+| user | user_id(PK) | Unique identifier for a user. | int |
+| | username | Username of a user. | varchar (127) |
+| | email | Email of a user. | varchar (255) |
+| | phone_number | Phone number of a user. | varchar (31) |
+| | password | Password of a user. | varchar (255) |
+| | location_id(FK) | References the location_id in the location table. | int |
+| | language_id(FK) | References the language_id in the languages table. | int |
+| | | | |
+| user_check | verification_id(PK) | Unique identifier for a user verification. | int |
+| | admin_id(FK) | References the admin_id in the admin table. | int |
+| | user_id(FK) | References the user_id in the user table. | int |
+| | email_ver | Has an admin verified the email? | bool |
+| | phone_ver | Has an admin verified the phone number? | bool |
+| | prof_pic_id(FK) | References the picture_id in the profile_picture table. | int |
+| | photo_ver | Has an admin verified the profile picture? | bool |
+| | payment_method_id(FK) | References the payment_method_id in the payment_method table. | int |
+| | payment_ver | Has an admin verified the payment method? | bool |
+| | ver_date | Date of a user verification. | date |
+| | | | |
+| user_role | user_id(FK) | References the user_id in the user table. | int |
+| | role_id(FK) | References the role_id in the role table. | int |
+| | date_created | Date when a user created a role. | date |
+| | | | |
+| verification | id(PK) | Unique identifier for verification of a user. Also references the user_id in the user table | int |
+| | verification_id (FK) | References the verification_id in the user_check table. | int |
+| | user_id(FK) | References a user_id in user table. | int |
+| | phone_verified | Is phone verified? | bool |
+| | email_verified | Is email verified?	| bool |
+| | picture_verified | Is profile picture verified? | bool |
+| | payment_verified | Is payment method verified? | bool |
+| | is_verified | Is user account verified? | bool |
+| | ver_update | Date when the verification data were verified. | date |
