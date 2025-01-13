@@ -9,9 +9,9 @@ The existing problem revolves around the absence of a structured and well-define
 
 # Solution Approaches
 1.	Requirements Specification:
-•	Developed a requirements specification document outlining the functionalities associated with each user role.
+	- Developed a requirements specification document outlining the functionalities associated with each user role.
 2.	Entity-Relationship Modeling:
-•	Developed an Entity-Relationship Model (ERM) to visually represent the relationships between different entities in the system. Specified cardinality using Chen notation to ensure a clear understanding of the data flow and dependencies within the system. A detailed data dictionary was created to provide explanations of each column in the tables.
+	- Developed an Entity-Relationship Model (ERM) to visually represent the relationships between different entities in the system. Specified cardinality using Chen notation to ensure a clear understanding of the data flow and dependencies within the system. A detailed data dictionary was created to provide explanations of each column in the tables.
 
 # Requirements Specification
 The system accommodates various roles with specific functionalities and permissions:
