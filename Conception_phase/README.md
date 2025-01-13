@@ -43,10 +43,12 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 ![ER](ER_Model/ERM.png)
 
 # Data Dictionary
-admin	admin_id(PK)	Unique identifier for an admin.	int
-	user_id(FK)	References the user_id in the user table.	int
-	per_from_comm	A percentage from an income, an admin is getting paid for a done booking.	decimal (3,2)
-	last_login	Date, when an admin was logged last time.	date
+| Entity | Attribute | Description | Type |
+|--------|-----------|-------------|------|
+| admin | admin_id(PK) | Unique identifier for an admin. | int |
+| |user_id(FK) | References the user_id in the user table. | int |
+|	| per_from_comm	| A percentage from an income, an admin is getting paid for a done booking.	| decimal (3,2) |
+|	| last_login	| Date, when an admin was logged last time.	| date | <br>
 
 amenities	amenity_id(PK)	Unique identifier for an amenity.	int
 	amenity_name	Name for an amenity.	varchar (127)
