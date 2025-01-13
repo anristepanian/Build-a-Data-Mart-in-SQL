@@ -105,27 +105,27 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | | bio | Description of a host. | text |
 | | commission | Commission, that host pays to Airbnb (It is constant 3%). | decimal (3,2) |
 | | rating | Rating of a host. | decimal (2,1) |
-
-host_languages	host_id(FK)	References the host_id in the host table.	int
-	language_id(FK)	References the language_id in the languages table.	int
-
-hosts_rev	h_review_id(PK)	Unique identifier for a host’s review.	int
-	host_id(FK)	References the host_id in the host table.	int
-	guest_id(FK)	References the guest_id in the guest table.	int
-	rev_desc	Rating, that host gave to a guest.	decimal (1,0)
-	rating	Comment on guest’s review.	text
-	rev_date	Date of a review.	date
-	update_date	Date of an update of a review.	date
-
-income	income_id(PK)	Unique identifier for an income calculation.	int
-	booking_id(FK)	References the booking_id in the booking table.	int
-	guest_id(FK)	References the guest_id in the guest table.	int
-	host_id(FK)	References the host_id in the host table.	int
-	admin_id(FK)	References the admin_id in the admin table.	int
-	corporate_tax	Corporate tax (21%), Airbnb pays to US government, since Airbnb’s main office is based in San Francisco.	decimal (3,1)
-	final_income	After tax income, Airbnb gets from a successful booking. It is usually counted from guest’s and host’s commissions.	decimal (7,2)
-	income_date	Date of an income.	decimal (2,1)
-
+| | | | |
+| host_languages | host_id(FK) | References the host_id in the host table. | int |
+| | language_id(FK) | References the language_id in the languages table. | int |
+| | | | |
+| hosts_rev | h_review_id(PK) | Unique identifier for a host’s review. | int |
+| | host_id(FK) | References the host_id in the host table. | int |
+| | guest_id(FK) | References the guest_id in the guest table. | int |
+| | rev_desc | Rating, that host gave to a guest. | decimal (1,0) |
+| |rating | Comment on guest’s review. | text |
+| | rev_date | Date of a review. | date |
+| | update_date | Date of an update of a review. | date |
+| | | | |
+| income |income_id(PK) | Unique identifier for an income calculation. | int |
+| | booking_id(FK) | References the booking_id in the booking table. | int |
+| | guest_id(FK) | References the guest_id in the guest table. | int |
+| | host_id(FK) | References the host_id in the host table. | int |
+| | admin_id(FK) | References the admin_id in the admin table. | int |
+| | corporate_tax | Corporate tax (21%), Airbnb pays to US government, since Airbnb’s main office is based in San Francisco. | decimal (3,1) |
+| | final_income | After tax income, Airbnb gets from a successful booking. It is usually counted from guest’s and host’s commissions. | decimal (7,2) |
+| | income_date | Date of an income. | decimal (2,1) |
+| | | | |
 languages	language_id(PK)	Unique identifier for a language.	int
 	language_name	Name of language.	varchar (127)
 	language_code	International code of a language.	varchar (15)
