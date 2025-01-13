@@ -40,7 +40,7 @@ __Data Integrity Enforcement:__ Enforce Referential Integrity Constraints, Valid
 __Security Management:__ Ensure secure data handling, prevent unauthorized access, and manage user authentication.<br>
 
 # ER Model
-![](Conception_phase/ER Model/ERM.png)
+![ER](Conception_phase/ER_Model/ERM.png)
 
 # Data Dictionary
 admin	admin_id(PK)	Unique identifier for an admin.	int
