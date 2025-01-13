@@ -4,7 +4,7 @@ the database design. Anything that is overlooked or forgotten in this phase has 
 tation later and will lead, in the worst case, to a useless database.
 
 # Summary
-In this phase, I have designed a comprehensive database schema based on the "Airbnb" system. The main goal is to create a database structure that represents the "Airbnb" platform and its functionalities, keeping in mind that users have multiple roles, while roles have multiple functions, such as hosts who rent out accommodation, guests who book accommodation, and administrators who verify users and their bookings.
+In this phase, I have designed a comprehensive database schema based on the "Airbnb" system. The main goal is to create a database structure that represents the "Airbnb" platform and its functionalities, keeping in mind that users have multiple roles, while roles have multiple functions, such as hosts who rent out accommodation, guests who book accommodation, and administrators who verify users and their bookings.<br><br>
 The existing problem revolves around the absence of a structured and well-defined database schema for the “Airbnb” system. The lack of a standardized database makes it difficult to efficiently manage user data, bookings, payments, system revenue, and other essential functions. This can result in errors, security vulnerabilities, and a lack of scalability.
 
 # Solution Approaches
@@ -14,30 +14,30 @@ The existing problem revolves around the absence of a structured and well-define
 	- Developed an Entity-Relationship Model (ERM) to visually represent the relationships between different entities in the system. Specified cardinality using Chen notation to ensure a clear understanding of the data flow and dependencies within the system. A detailed data dictionary was created to provide explanations of each column in the tables.
 
 # Requirements Specification
-The system accommodates various roles with specific functionalities and permissions:
-__Guests:__ Individuals who browse and book temporary accommodations. They can search and browse listings based on criteria, book accommodations, initiate payments, manage profiles, view booking history, and leave reviews.
-__Hosts:__ Individuals offering accommodations. They can create/manage listings, respond to reservation requests, view income reports, and manage profiles.
-__Admins:__ System managers responsible for platform maintenance. They manage and verify user accounts, reset passwords, verify made bookings, configure system settings and generate system-wide reports.
-__System:__ Represents automated processes ensuring data integrity, validating user inputs, implementing secure authentication, and calculating revenue.
-__Overall Actions:__ Users can select preferred languages, and the system supports multiple languages. Users can upload/manage multimedia content, ensuring proper storage and retrieval.
-__Required Data and Functions:__
-Guest personal information (name, email, contact details), booking history, language preference data are required for the guest. Host personal information, listing details (location, pricing, availability, amenities), and reservation history data are required for the host. Admin information, user and listing data for monitoring and reporting data are required for the admin. Booking and multimedia content data are required for the system.
-__Guest Functions:__ Search for Available Properties Based on Criteria (Location, Date, and Price), View Property Details (Photos, Descriptions, and Reviews), Make a Reservations. Leave Reviews for Properties and Hosts, Manage Their Profile and View Their Booking History.
-__Host Functions:__ List Properties and Provide Details (Location, Pricing, Amenities, and Availability), Update Property Details and Manage Availability Calendars. View Booking Requests and Approve/Decline Reservations, Leave Reviews for Guests, Manage Profile Information.
-__Admin Functions:__ Monitor and Manage User Accounts, Including Handling Reports and Disputes, Ensure Listings Comply with Platform Policies. Access and Analyze Platform-wide Data for Performance, Manage payments, Update Platform Configurations, Policies, and Security Protocols.
-__System Functions:__ Data Integrity Enforcement, Security Management, Multilingual Support, Media Management, Handling Transactions and Calculating Revenue. Providing Guests and Hosts Rate and Review Each Other.
-__Overall Functions:__
-__Multilingual Support:__ User language Preferences, Language Configuration.
-__Media Management:__ Upload and Manage Multimedia Content, Ensure Proper Storage and Retrieval of Media.
-__Search and Browse Listings:__ Filter and Sort Listings Based on Criteria.
-__Make Reservations:__ Initiate Reservation Process, Provide Check-in and Check-out Dates, Process Payments Securely.
-__Create and Manage Listings:__ Add New Listings, Edit or Deactivate Existing Listings, Provide Detailed Listing Information.
-__Respond to Reservation Requests:__ View and Respond to Reservation Requests, Confirm or Decline Reservations Based on Availability.
-__View Income Reports:__ Access Reports Summarizing Yearly Income from Reservations.
-__Leave Reviews:__ Submit Reviews and Ratings for Past Stays Add, Edit, or Delete Employee Records: Manage Employee Information and Records.
-__Configure System Settings:__ Manage Global Settings for System Operation.
-__Data Integrity Enforcement:__ Enforce Referential Integrity Constraints, Validate and Sanitize User Inputs.
-__Security Management:__ Ensure secure data handling, prevent unauthorized access, and manage user authentication.
+The system accommodates various roles with specific functionalities and permissions:<br>
+__Guests:__ Individuals who browse and book temporary accommodations. They can search and browse listings based on criteria, book accommodations, initiate payments, manage profiles, view booking history, and leave reviews.<br>
+__Hosts:__ Individuals offering accommodations. They can create/manage listings, respond to reservation requests, view income reports, and manage profiles.<br>
+__Admins:__ System managers responsible for platform maintenance. They manage and verify user accounts, reset passwords, verify made bookings, configure system settings and generate system-wide reports.<br>
+__System:__ Represents automated processes ensuring data integrity, validating user inputs, implementing secure authentication, and calculating revenue.<br>
+__Overall Actions:__ Users can select preferred languages, and the system supports multiple languages. Users can upload/manage multimedia content, ensuring proper storage and retrieval.<br><br>
+__Required Data and Functions:__ <br>
+Guest personal information (name, email, contact details), booking history, language preference data are required for the guest. Host personal information, listing details (location, pricing, availability, amenities), and reservation history data are required for the host. Admin information, user and listing data for monitoring and reporting data are required for the admin. Booking and multimedia content data are required for the system.<br><br>
+__Guest Functions:__ Search for Available Properties Based on Criteria (Location, Date, and Price), View Property Details (Photos, Descriptions, and Reviews), Make a Reservations. Leave Reviews for Properties and Hosts, Manage Their Profile and View Their Booking History.<br>
+__Host Functions:__ List Properties and Provide Details (Location, Pricing, Amenities, and Availability), Update Property Details and Manage Availability Calendars. View Booking Requests and Approve/Decline Reservations, Leave Reviews for Guests, Manage Profile Information.<br>
+__Admin Functions:__ Monitor and Manage User Accounts, Including Handling Reports and Disputes, Ensure Listings Comply with Platform Policies. Access and Analyze Platform-wide Data for Performance, Manage payments, Update Platform Configurations, Policies, and Security Protocols.<br>
+__System Functions:__ Data Integrity Enforcement, Security Management, Multilingual Support, Media Management, Handling Transactions and Calculating Revenue. Providing Guests and Hosts Rate and Review Each Other.<br>
+__Overall Functions:__ <br>
+__Multilingual Support:__ User language Preferences, Language Configuration.<br>
+__Media Management:__ Upload and Manage Multimedia Content, Ensure Proper Storage and Retrieval of Media.<br>
+__Search and Browse Listings:__ Filter and Sort Listings Based on Criteria.<br>
+__Make Reservations:__ Initiate Reservation Process, Provide Check-in and Check-out Dates, Process Payments Securely.<br>
+__Create and Manage Listings:__ Add New Listings, Edit or Deactivate Existing Listings, Provide Detailed Listing Information.<br>
+__Respond to Reservation Requests:__ View and Respond to Reservation Requests, Confirm or Decline Reservations Based on Availability.<br>
+__View Income Reports:__ Access Reports Summarizing Yearly Income from Reservations.<br>
+__Leave Reviews:__ Submit Reviews and Ratings for Past Stays Add, Edit, or Delete Employee Records: Manage Employee Information and Records.<br>
+__Configure System Settings:__ Manage Global Settings for System Operation.<br>
+__Data Integrity Enforcement:__ Enforce Referential Integrity Constraints, Validate and Sanitize User Inputs.<br>
+__Security Management:__ Ensure secure data handling, prevent unauthorized access, and manage user authentication.<br>
 
 # ER Model
 ![](ER Model/ERM.png)
