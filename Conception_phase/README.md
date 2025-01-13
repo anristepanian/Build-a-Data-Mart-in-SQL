@@ -53,32 +53,32 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | amenities | amenity_id(PK) | Unique identifier for an amenity. | int |
 | | amenity_name | Name for an amenity. | varchar (127) |
 | |created | Date of creation. | date |
-
-booking	booking_id(PK)	Unique identifier for a booking.	int
-	guest_id(FK)	References the guest_id in the guest table.	int
-	listing_id(FK)	References the lsiting_id in the listing table.	int
-	adults	Number of adults.	tinyint
-	kids	Number of kids (2 - 12).	tinyint
-	infants	Number of infants (0 - 2).	tinyint
-	total_guests	Number of total guests.	tinyint
-	pets	Number of pets.	tinyint
-	check_it_date	Date of check-in.	date
-	check_out_date	Date of check-out.	date
-	price	Price of booking.	double
-	status	Status of a booking (e.g., “Pending”, “Confirmed”, “Canceled”).	varchar (127)
-	created	Date, when the booking was created.	date
-	updated	Date, when the booking was updated.	date
-
-booking_check	booking_ver_id(PK)	Unique identifier for a verified booking.	int
-	admin_id(FK)	References the admin_id in the admin table.	int
-	booking_id(FK)	References the booking_id in the booking table.	int
-	host_id(FK)	References the host_id in the host table.	int
-	host_confirmed	Has the host confirmed the booking?	bool
-	guest_id	References a guest_id in guest table.	int
-	guest_confirmed	Has the guest after 24 hours confirmed the booking?	bool
-	book_verified	Was booking verified by admin?	bool
-	book_ver_date	Date of a booking verification.	date
-	book_ver_update	Date of a booking verification update.	date
+| | | | |
+| booking | booking_id(PK) | Unique identifier for a booking. | int |
+| | guest_id(FK) | References the guest_id in the guest table. | int |
+| | listing_id(FK) | References the lsiting_id in the listing table. | int |
+| | adults | Number of adults. | tinyint |
+| | kids | Number of kids (2 - 12). | tinyint |
+| |infants | Number of infants (0 - 2). | tinyint |
+| | total_guests | Number of total guests. | tinyint |
+| | pets | Number of pets. | tinyint |
+| | check_it_date | Date of check-in. | date |
+| | check_out_date | Date of check-out. | date |
+| | price | Price of booking. | double |
+| | status | Status of a booking (e.g., “Pending”, “Confirmed”, “Canceled”). | varchar (127) |
+| | created | Date, when the booking was created. | date |
+| | updated | Date, when the booking was updated. | date |
+| | | | |
+| booking_check | booking_ver_id(PK) | Unique identifier for a verified booking. | int |
+| | admin_id(FK) | References the admin_id in the admin table. | int |
+| | booking_id(FK) | References the booking_id in the booking table. | int |
+| | host_id(FK) | References the host_id in the host table. | int |
+| | host_confirmed | Has the host confirmed the booking? | bool |
+| | guest_id | References a guest_id in guest table. | int |
+| | guest_confirmed | Has the guest after 24 hours confirmed the booking? | bool |
+| | book_verified | Was booking verified by admin? | bool |
+| | book_ver_date | Date of a booking verification. | date |
+| | book_ver_update | Date of a booking verification update. | date |
 
 guest	guest_id(PK)	Unique identifier for a guest.	int
 	user_id(FK)	References the user_id in the user table.	int
