@@ -12,7 +12,7 @@ Has to be defined a database structure and certain reasonable dummy data, to ens
 # How to improve the project
 
 # Authors
-- https://github.com/just-a-Programmer1
+- https://github.com/anristepanian
 
 # License
 [GNU General Public License v2.0](LICENSE)
