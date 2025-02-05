@@ -13,6 +13,3 @@ Has to be defined a database structure and certain reasonable dummy data, to ens
 
 # Authors
 - https://github.com/anristepanian
-
-# License
-[GNU General Public License v2.0](LICENSE)
