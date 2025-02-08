@@ -1,6 +1,6 @@
 # Build-a-Data-Mart-in-SQL
 
-The goal is to build a mart in SQL from scratch, that represents "Airbnb" system.
+The goal is to build a mart in SQL from scratch, that represents "Airbnb" system.<br>
 The program represents a Use-Case of booking a hotel room based on "Airbnb" system.
 
 # Task
