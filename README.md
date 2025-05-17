@@ -16,7 +16,7 @@ The database installation and usage you can find in the [Database Installation M
 
 # Tests
 
-In order to test the database you can run the []
+In order to test the database you can run the [test cases](test_cases.sql) file
 
 # Authors
 - The project was developed by [Anri Stepanian](https://github.com/anristepanian)
