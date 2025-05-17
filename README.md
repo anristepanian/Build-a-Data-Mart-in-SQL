@@ -12,6 +12,8 @@ Has to be defined a database structure and certain reasonable dummy data, to ens
 
 # Installation & Usage
 
+The database installation and usage you can find in the [Database Installation Manual](Database_Installation_Manual.pdf)
+
 # Tests
 
 # Authors
