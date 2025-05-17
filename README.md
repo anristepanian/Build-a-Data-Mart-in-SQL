@@ -10,7 +10,7 @@ Has to be defined a database structure and certain reasonable dummy data, to ens
 
 # Future Enhancements
 
-# Installation 
+# Installation & Usage
 
 # Tests
 
