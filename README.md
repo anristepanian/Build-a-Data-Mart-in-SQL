@@ -15,4 +15,4 @@ Has to be defined a database structure and certain reasonable dummy data, to ens
 # How to improve the project
 
 # Authors
-- https://github.com/anristepanian
+The project was developed by [Anri Stepanian](https://github.com/anristepanian)
