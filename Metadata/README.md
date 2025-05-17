@@ -1,6 +1,6 @@
 # Metadata
 
-The Airbnb database schema is a comprehensive structure designed to manage various aspects of the <br> Airbnb platform, facilitating the rental and booking of accommodations, handling user interactions, <br> managing payments, addressing customer service issues and calculating income.
+The Airbnb database schema is a comprehensive structure designed to manage various aspects of the Airbnb platform, facilitating the rental and booking of accommodations, handling user interactions, managing payments, addressing customer service issues and calculating income.
 
 # Technology Choices:
 
