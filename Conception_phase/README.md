@@ -80,6 +80,13 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | | book_ver_date | Date of a booking verification. | date |
 | | book_ver_update | Date of a booking verification update. | date |
 | | | | |
+| create_house_rule | rule_id(PK) | Unique indentifier for a crfeated house rule. | int |
+| | host_id(FK) | References the host_id in the host table. | int |
+| | listing_id(FK) | References the lsiting_id in the listing table. | int |
+| | rule_name  | Name of the created house rule. | varchar (255) |
+| | rule_description | A description of the created house rule. | text |
+| | creation_date | Date when the house rule was created. | date |
+| | | | |
 | guest | guest_id(PK) | Unique identifier for a guest. | int |
 | | user_id(FK) | References the user_id in the user table. | int |
 | | birth_date | Date of birth. | date |
@@ -117,6 +124,16 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | | rev_date | Date of a review. | date |
 | | update_date | Date of an update of a review. | date |
 | | | | |
+| house_rules | id(PK) | Unique identifier for house rules. Also references the listing_id in the listing table. | int |
+| | pets_allowed | Are pets allowed in the house? | bool |
+| | events_allowed  | Are events allowed in the house? | bool |
+| | smoking_allowed | Is smoking allowed in the house?  | bool |
+| | quiet_hours | When is it prohibited to make noise? What are the quiet hours of the house? | varchar (255) |
+| | check_in_time | Check-in time. | varchar (127) |
+| | check_out_time | Check-out time. | varchar (127) |
+| | max_capacity | Number of maximum guests allowed. | smallint |
+| | comm_filming_allowed | Is it allowed to film for commercial purposes in the house? | bool |
+| | | | |
 | income |income_id(PK) | Unique identifier for an income calculation. | int |
 | | booking_id(FK) | References the booking_id in the booking table. | int |
 | | guest_id(FK) | References the guest_id in the guest table. | int |
@@ -136,13 +153,13 @@ __Security Management:__ Ensure secure data handling, prevent unauthorized acces
 | | title | Title of a listing. | varchar (255) |
 | | description | Description of a listing. | text |
 | | property_type | Type of a property (e.g., "Apartment", "House", "Villa", “Room”). | varchar (63) |
-| | max_capacity | Number of maximum guests allowed. | tinyint |
 | | beds | Number of beds. | tinyint |
 | | bathrooms | Number of bathrooms. | tinyint |
 | | price_per_night | Price of a listing per night. | decimal (7,2) |
 | | cleaning_fee | Cleaning fee of a listing. | decimal (6,2) |
 | | availability_status | Current availability status (e.g., "Available", "Blocked", "Booked"). | varchar (63) |
 | | rating | Rating of a booking. | decimal (2,1) |
+| | num_reviews | Number of reviews for the listing. | int |
 | | created | Date, when the listing was created. | date |
 | | updated | Date, when the listing was updated. | date |
 | | | | |
