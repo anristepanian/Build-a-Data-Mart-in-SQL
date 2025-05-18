@@ -10,6 +10,10 @@ Has to be defined a database structure and certain reasonable dummy data, to ens
 
 # Future Enhancements
 
+To further develop the Airbnb data mart and enhance its practical value, several future improvements can be considered. From a SQL perspective, enhancements such as adding booking trends and host performance, user activity logs which can significantly broaden the analytical scope. <br>
+However, for more advanced features, SQL would need to be supplemented by external tools. For example, implementing a real-time booking analytics system would require technologies like Apache Kafka or Spark, which are better suited for streaming data. A sophisticated recommendation engine or user behavior prediction module would benefit from machine learning models developed in Python or R, using libraries such as scikit-learn or TensorFlow. Similarly, building interactive visual dashboards or integrating maps and currency conversion features would require front-end technologies, API integrations, and data visualization platforms like Tableau or Power BI. <br>
+By combining SQL’s robust data management capabilities with modern analytical and visualization tools, the Airbnb data mart could evolve into a comprehensive decision-support system for hosts, guests, and administrators alike.
+
 # Installation & Usage
 
 The database installation and usage you can find in the [Database Installation Manual](Database_Installation_Manual.pdf)
